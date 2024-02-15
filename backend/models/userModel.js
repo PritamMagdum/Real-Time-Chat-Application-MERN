@@ -1,21 +1,21 @@
 const mongoose = require('mongoose')
 
-const userModel = mongoose.Schema({
+const userModel = new mongoose.Schema({
     name: {
-        Type: String,
+        type: String,
         required: true
     },
     email: {
-        Type: String,
-        required: true
+        type: String,
+        required: true,
+        unique: true
     },
     password: {
-        Type: String,
+        type: String,
         required: true
     },
     pic: {
         type: String,
-        required: true,
         default: "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg"
     }
 })
