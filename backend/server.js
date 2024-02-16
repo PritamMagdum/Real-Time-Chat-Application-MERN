@@ -9,11 +9,14 @@ dotenv.config();
 connectDB();
 
 const app = express();
+
+app.use(express.json());
 app.get('/', (req, res) => {
     res.send("Hey we on 5000 PORT");
 
     // res.send(data);
 })
+
 
 // app.get('/api/chat', (req, res) => {
 //     res.send(chats);
