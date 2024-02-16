@@ -19,7 +19,7 @@ const Login = () => {
             toast({
                 title: "Please Fill all the Fields",
                 status: "warning",
-                duration: 5000,
+                duration: 4000,
                 isClosable: true,
                 position: 'bottom'
             });
@@ -39,7 +39,7 @@ const Login = () => {
             toast({
                 title: "Login Successful",
                 status: "success",
-                duration: 5000,
+                duration: 4000,
                 isClosable: true,
                 position: 'bottom'
             });
@@ -52,7 +52,7 @@ const Login = () => {
             toast({
                 title: "Error Occured!",
                 status: "error",
-                duration: 5000,
+                duration: 4000,
                 isClosable: true,
                 position: 'bottom'
             });
@@ -65,12 +65,14 @@ const Login = () => {
             <FormControl id='email' isRequired>
                 <FormLabel>Email</FormLabel>
                 <Input
+                    value={email}
                     placeholder='Enter Your Email' onChange={(e) => setEmail(e.target.value)} />
             </FormControl>
             <FormControl id='password' isRequired>
                 <FormLabel>Password</FormLabel>
                 <InputGroup>
                     <Input
+                        value={email}
                         type={show ? "text" : "password"}
                         placeholder='Enter Your Password' onChange={(e) => setPassword(e.target.value)} />
                     <InputRightElement>
